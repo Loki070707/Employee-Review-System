@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- noty js links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+  <!-- Bootstrap CSS -->
+  <title>Employee Review System</title>
+  <link rel="stylesheet" href="/css/adminDash.css">
+
+
+
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <div class="item">
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/4577/4577415.png">
+        <h1>Add An Employee</h1>
+        <a href="/admin/addEmployee"><button class="button-53" role="button">Click Me !</button></a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/7819/7819986.png">
+        <h1>View Employee</h1>
+        <a href="/admin/viewEmployee"><button class="button-53" role="button">Click Me !</button></a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/1484/1484584.png">
+        <h1>View Employee Feedback</h1>
+        <a href="/admin/viewListFeedback"><button class="button-53" role="button">Click Me !</button></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- for flash messages -->
+  <script>
+      <% if (flash.success && flash.success.length > 0) {%>
+      new Noty({
+        theme: 'relax',
+        text: "<%= flash.success %>",
+        type: 'success',
+        layout: 'topRight',
+        timeout: 1500
+
+      }).show();    
+      <%} %>
+
+      <% if (flash.error && flash.error.length > 0) {%>
+      new Noty({
+        theme: 'relax',
+        text: "<%= flash.error %>",
+        type: 'error',
+        layout: 'topRight',
+        timeout: 1500
+
+      }).show();    
+      <%} %>
+  </script>
+</body>
+
+</html>
